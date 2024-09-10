@@ -174,6 +174,12 @@ console.log(olderThan19)
 
 // - Assign the found comment object to the variable 'commentById'.
 
+const cmtNum = comments.find((comment) => {
+ return comment.id = 823423
+})
+console.log("E8:")
+console.log(cmtNum)
+
 // Exercise 9: Array.prototype.findIndex()
 
 // Determine the index of the comment that has a specific ID 123523 in an array 
@@ -181,6 +187,13 @@ console.log(olderThan19)
 
 // - Store the index in the variable 'idx'.
 
+const specificID = comments.findIndex((comment) => {
+  const idx = comment.id === 123523
+  return idx
+})
+
+console.log("E9:")
+console.log(specificID)
 // Level Up exercise 1: Array.prototype.reduce()
 
 // Calculate the combined lifespan of all the inventors using 
