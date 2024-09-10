@@ -23,7 +23,7 @@ const inventors = [
     'Bethea, Erin', 'Bevan, Aneurin', 'Bevel, Ken', 'Biden, Joseph',
     'Bierce, Ambrose', 'Biko, Steve', 'Billings, Josh', 'Biondo, Frank',
     'Birrell, Augustine', 'Black, Elk', 'Blair, Robert', 'Blair, Tony',
-    'Blake, William'
+    'Blake, William' 
   ];
   const travelMethods = [
     'car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van',
@@ -87,10 +87,11 @@ console.log(fullName)
 // Sort the inventors by birth date in ascending order (from those born furthest in
 // the past to those born most recently).
 
-const oldtoYoung = inventors.sort((inventor) => {
-  inventor.year
+const oldtoYoung = inventors.sort((inventor, idx) => {
+  return inventor.year - idx.year
 })
 
+console.log("E3:")
 console.log(oldtoYoung)
 
 // Exercise 4: Array.prototype.find()
@@ -104,6 +105,13 @@ console.log(oldtoYoung)
 //   inventor with the first name 'Ada'.
 // - Assign the found inventor object to the variable inventorNamedAda
 
+const nameAda = inventors.find((inventor) => {
+  return inventor.first = "Ada"
+})
+
+console.log("E4:")
+console.log(nameAda)
+
 // Exercise 5: Array.prototype.map()
 
 // Use the Array.prototype.map() method to reformat each name in the 'people' 
@@ -114,6 +122,14 @@ console.log(oldtoYoung)
 //       names. You can split the string using ', ' as the separator.
 //       After splitting the names, rearrange them to the "First Last" format.
 
+const nameProper = people.map((name) => {
+  const [last, first] = name.split(', ');
+  return `${first},${last}`
+})
+
+console.log("E5:")
+console.log(nameProper)
+
 // Exercise 6: Array.prototype.some()
 
 // Determine if there is at least one person in the devs array who is 18 years 
@@ -123,6 +139,8 @@ console.log(oldtoYoung)
 // - Use the Array.prototype.some() method to check if any person in the array is 
 //   18 years old or older.
 // - Store the result (true or false) in the variable 'isAdultPresent'. 
+
+console.log("E6: ")
 
 // Exercise 7: Array.prototype.every()
 
