@@ -140,7 +140,14 @@ console.log(nameProper)
 //   18 years old or older.
 // - Store the result (true or false) in the variable 'isAdultPresent'. 
 
+const isAdultPresent = devs.some((dev) => {
+ const isMinor = 2024 - dev.year >= 18
+  return isMinor
+  }
+)
+
 console.log("E6: ")
+console.log(isAdultPresent)
 
 // Exercise 7: Array.prototype.every()
 
@@ -153,6 +160,13 @@ console.log("E6: ")
 //   array is at least 19 years old.
 // - Store the result (true or false) in the variable 'isEveryone19OrOlder'.
 
+const olderThan19 = devs.every((dev) => {
+  const isEveryone19OrOlder = dev.year <= 2005
+  return isEveryone19OrOlder
+})
+
+console.log("E7:")
+console.log(olderThan19)
 // Exercise 8: Array.prototype.find()
 
 // Use Array.prototype.find() to identify and retrieve the comment object with 
